@@ -29,7 +29,7 @@ with st.sidebar:
   bill_depth = st.slider('Bill Depth (mm)', 13.1, 21.5, 17.2)
   flipper_length = st.slider('Flipper Lenght (mm)', 172.0, 231.0, 201.0)
   body_mass = st.slider('Body Mass (g)', 2700.0, 6300.0, 4207.0)
-  gender = st.selectbox('Gender', ('male', 'female'))
+  sex = st.selectbox('Sex', ('male', 'female'))
 
   #Create a DataFrame for the input features
   data = {'island': island,
@@ -37,7 +37,7 @@ with st.sidebar:
           'bill_depth': bill_depth,
           'flipper_length': flipper_length,
           'body_mass': body_mass,
-          'gender': gender}
+          'sex': sex}
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df, X], axis=0)
 
@@ -48,6 +48,6 @@ with st.expander('Input Features'):
   input_penguins
 
 #Encode
-encode = ['island', 'gender']
-df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+encode = ['island', 'sex']
+df_penguins = pd.get_dummies(input_penguins[', prefix=encode)
 df_penguins
