@@ -77,7 +77,7 @@ with st.expander('Data preparation'):
 # Model Training and inference
 ## Train the ML model
 clf = RadomForestClassifier()
-clf.fit(X_raw, y)
+clf.fit(df_penguins, y)
 
 
 ## Apply model to make predictions
