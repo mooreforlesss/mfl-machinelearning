@@ -31,12 +31,14 @@ with st.sidebar:
   body_mass = st.slider('Body Mass (g)', 2700.0, 6300.0, 4207.0)
   gender = st.selectbox('Gender', ('male', 'female'))
 
-#Create a DataFrame for the input features
-data = {'island', island,
-        'bill_length', bill_length,
-        'bill_depth', bill_depth,
-        'flipper_length', flipper_length,
-        'body_mass', body_mass,
-        'gender', gender}
-input_df = pd.DataFrame(data, index=[0])
-input_df
+  #Create a DataFrame for the input features
+  data = {'island':, island,
+          'bill_length': bill_length,
+          'bill_depth': bill_depth,
+          'flipper_length': flipper_length,
+          'body_mass': body_mass,
+          'gender': gender}
+  input_df = pd.DataFrame(data, index=[0])
+  input_penguins = pd.concat([input_df, x], axis=0)
+
+input_penguins
